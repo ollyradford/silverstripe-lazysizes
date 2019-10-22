@@ -95,13 +95,13 @@ Example:
 
 Compatibility
 ==================
-Tested with 3.1
+Tested with 4.4.4
 
 Installation
 ==================
 
-composer require lekoala/silverstripe-lazysizes
+composer require ollyradford/silverstripe-lazysizes
 
-Maintainer
+Maintainer (fork)
 ==================
-LeKoala - thomas@lekoala.be
+LeKoala - olly@foundationcgi.com
