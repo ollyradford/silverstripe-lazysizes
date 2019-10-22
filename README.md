@@ -31,7 +31,7 @@ Respimages:
 
 You can also define your own path to the libraries by adjusting the following path
 
-	LazySizesImageExtension:
+	lekoala\LazySizesImageExtension:
 		js_path: 'lazysizes/javascript'
 
 LazyLoading
@@ -60,7 +60,7 @@ Retina is also supported.
 
 Config example:
 
-	LazySizesImageExtension:
+	lekoala\LazySizesImageExtension:
 		ResponsiveDefault:
 			sizes: [320x213 320w,640x426 640w,960x639 960w,1280x852 1280w]
 		ResponsiveDefaultSquare:
@@ -100,8 +100,8 @@ Tested with 4.4.4
 Installation
 ==================
 
-composer require ollyradford/silverstripe-lazysizes
+composer require lekoala/silverstripe-lazysizes
 
-Maintainer (fork)
+Maintainer
 ==================
-LeKoala - olly@foundationcgi.com
+LeKoala - thomas@lekoala.be
