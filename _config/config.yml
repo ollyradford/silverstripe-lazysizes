@@ -3,10 +3,10 @@ Name: lasysizes
 ---
 Image:
   extensions:
-    - LazySizesImageExtension
+    - lekoala/LazySizesImageExtension
 Controller:
   extensions:
-    - LazySizesControllerExtension
+    - lekoala/LazySizesControllerExtension
 LazySizesImageExtension:
   default_method: SetWidth
   default_size: 800x600
