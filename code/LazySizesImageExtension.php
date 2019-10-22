@@ -32,7 +32,7 @@ class LazySizesImageExtension extends DataExtension
     public static function config()
     {
         if (!self::$_configCache) {
-            $this->configSets = Config::inst()->get(__CLASS__, 'sets') ?: [];
+            self::$_configCache = Config::inst()->get(__CLASS__, 'sets') ?: [];
         }
         return self::$_configCache;
     }
