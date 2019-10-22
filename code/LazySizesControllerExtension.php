@@ -3,6 +3,7 @@
 namespace lekoala;
 
 use SilverStripe\Core\Extension;
+use SilverStripe\View\Requirements;
 
 /**
  * LazySizesControllerExtension

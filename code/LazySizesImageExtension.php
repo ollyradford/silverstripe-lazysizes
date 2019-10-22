@@ -3,6 +3,8 @@
 namespace lekoala;
 
 use SilverStripe\ORM\DataExtension;
+use SilverStripe\Core\Config\Config;
+use Exception;
 
 /**
  * LazySizesImageExtension
@@ -22,16 +24,18 @@ class LazySizesImageExtension extends DataExtension
      */
     protected static $_configCache = null;
 
-
-		/**
-     * {@inheritdoc}
+    /**
+     * Config accessor
+     *
+     * @return Config_ForClass
      */
-    public function __construct()
+    public static function config()
     {
-        parent::__construct();
-        $this->configCache = Config::inst()->get(__CLASS__, 'sets') ?: [];
+        if (!self::$_configCache) {
+            self::$_configCache = Config::inst()->forClass(__class__);
+        }
+        return self::$_configCache;
     }
-
 
     /**
      * A wildcard method for handling responsive sets as template functions,
@@ -41,12 +45,13 @@ class LazySizesImageExtension extends DataExtension
      * @param array $args The arguments passed to the method
      * @return SSViewer
      */
-		 public function __call($method, $args)
-     {
-         if ($config = $this->getConfigForSet($method)) {
-             return $this->createResponsiveSet($config, $args, $method);
-         }
-     }
+    public function __call($method, $args)
+    {
+        $config = $this->getConfigForSet($method);
+        if ($config !== false) {
+            return $this->createResponsiveSet($config, $args, $method);
+        }
+    }
 
     /**
      * Requires the necessary JS and sends the required HTML structure to the template
