@@ -1,7 +1,7 @@
 {
     "name": "lekoala/silverstripe-lazysizes",
     "description": "Adds lazysizes in the SilverStripe CMS",
-    "type": "silverstripe-module",
+    "type": "silverstripe-vendormodule",
     "keywords": [
         "silverstripe",
         "lazysizes",
