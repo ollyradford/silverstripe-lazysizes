@@ -7,7 +7,7 @@ Image:
 Controller:
   extensions:
     - lekoala/LazySizesControllerExtension
-LazySizesImageExtension:
+lekoala/LazySizesImageExtension:
   default_method: SetWidth
   default_size: 800x600
   lqip_multiplier: 0.2
