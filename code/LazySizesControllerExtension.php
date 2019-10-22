@@ -1,9 +1,14 @@
 <?php
 
+namespace lekoala;
+
+use SilverStripe\Core\Extension;
+
 /**
  * LazySizesControllerExtension
  *
  * @author lekoala
+ * @author ollyradford
  */
 class LazySizesControllerExtension extends Extension
 {

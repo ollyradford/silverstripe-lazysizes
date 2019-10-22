@@ -1,9 +1,14 @@
 <?php
 
+namespace lekoala;
+
+use SilverStripe\ORM\DataExtension;
+
 /**
  * LazySizesImageExtension
  *
  * @author lekoala
+ * @author ollyradford
  */
 class LazySizesImageExtension extends DataExtension
 {
